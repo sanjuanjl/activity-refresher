@@ -60,17 +60,42 @@ export class StudentList {
 
     updateCollege(id: string, newCollegeName: string) {
         // find student using id
+        let student = this.students.find(element => element.studentId === id);
+
+        if(student){
+            student.college = newCollegeName;
+            return student;
+        }
     }
 
     updateAddress(id: string, newAddress: string) {
         // find student using id
+        let student = this.students.find(element => element.studentId === id);
+
+        if(student){
+            student.address = newAddress;
+            return student;
+        }
     }
 
     updateCourse(id: string, newCourse: string) {
         // find student using id
+        let student = this.students.find(element => element.studentId === id);
+
+        if(student){
+            student.course = newCourse;
+            return student;
+        }
     }
 
     updateGender(id: string, newGender: string) {
         // find student using id
+        // added
+        let student = this.students.find(element => element.studentId === id);
+
+        if(student){
+            student.gender = newGender;
+            return student;
+        }
     }
 }
